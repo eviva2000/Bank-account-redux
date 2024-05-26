@@ -9,11 +9,9 @@ const customerReducer = (state = initialStateCustomer, action) => {
     case "customer/createCustomer":
       return {
         ...state,
-        customer: {
-          fullName: action.payload.fullName,
-          nationalId: action.payload.nationalId,
-          createdAt: action.payload.createdAt,
-        },
+        fullName: action.payload.fullName,
+        nationalId: action.payload.nationalId,
+        createdAt: action.payload.createdAt,
       };
     case "customer/updateName":
       return {
@@ -25,6 +23,7 @@ const customerReducer = (state = initialStateCustomer, action) => {
   }
 };
 
+// Action creators are generated for each case reducer function
 export const createCustomer = (fullName, nationalId) => {
   return {
     type: "customer/createCustomer",

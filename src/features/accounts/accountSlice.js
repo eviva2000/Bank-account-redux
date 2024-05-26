@@ -40,7 +40,7 @@ const accountReducer = (state = initialStateAccount, action) => {
   }
 };
 
-export const depoosit = (amount) => {
+export const deposit = (amount) => {
   return { type: "account/deposit", payload: amount };
 };
 export const withdraw = (amount) => {
